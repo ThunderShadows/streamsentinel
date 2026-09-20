@@ -1,5 +1,3 @@
-# Fintech Real-Time Fraud Detection Pipeline
-
 To simulate enterprise-grade data engineering, this project builds a highly scalable real-time pipeline capable of handling thousands of financial transactions per second. The core challenge involved working with high-velocity data feeds, where network-induced transaction retries can cause duplicate submissions and poor cellular connectivity can introduce significant late-arriving event data.
 
 
