@@ -2,7 +2,6 @@
 
 To simulate enterprise-grade data engineering, this project builds a highly scalable real-time pipeline capable of handling thousands of financial transactions per second. The core challenge involved working with high-velocity data feeds, where network-induced transaction retries can cause duplicate submissions and poor cellular connectivity can introduce significant late-arriving event data.
 
-> **Project status**: This README describes the pipeline's target architecture, including a Spark cluster wired end-to-end via Docker and a mechanically valid velocity-detection signal. The rewrite bringing the code fully in line with this document is being delivered incrementally — see [docs/progress/](docs/progress/) for a day-by-day log of what has actually landed so far.
 
 ## Objectives
 
@@ -138,8 +137,3 @@ Known limitation: because the alert sink is local-filesystem Parquet (not a dist
 
 The pipeline absorbs and processes rapid micro-batches under high-volume load conditions, capturing extreme transaction-velocity events for high-activity assets like BTC-USD, with state-store bounds and fault tolerance provided by watermark-based state purges and checkpointing.
 
-<img width="1681" height="858" alt="Screenshot from 2026-07-14 13-12-44" src="https://github.com/user-attachments/assets/74baac50-f9b4-4fc8-8914-b025ae46a6f3" />
-
-<img width="1681" height="604" alt="Screenshot from 2026-07-14 13-12-59" src="https://github.com/user-attachments/assets/e5f29ca8-e6a9-4779-ac3b-9a03ca262567" />
-
-*(Screenshots reflect the pre-rewrite dashboard and will be refreshed once the updated UI described above is live.)*
